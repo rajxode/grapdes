@@ -6,6 +6,8 @@ import React from 'react'
 function BottomBanner() {
   return (
     <div className='w-full h-[35vh] md:h-[75vh] pt-[5vh] flex justify-between items-center overflow-hidden pl-[7%]'>
+      
+      {/* contact info */}
       <div className='w-full md:w-1/4 h-full flex flex-col justify-around'>
         <div>
         <div className='text-4xl font-bold'>
@@ -18,6 +20,8 @@ function BottomBanner() {
         </div>
         </div>
       </div>
+
+      {/* banner image */}
       <div className='hidden md:flex w-2/5 h-full relative'>
         <div className='w-full h-full absolute bottom-0 right-[0] overflow-hidden rounded-tl-full'>
           <img src="./main/bottom.png" alt="image" className='w-full h-auto' />

@@ -37,9 +37,12 @@ const stats = [
 function University() {
   return (
     <div className='w-full min-h-[75vh] py-[10vh] flex flex-col justify-around relative px-[7%]'>
+        {/* heading */}
         <div className='w-full md:w-1/4 text-4xl font-bold'>
             The best in the country <span className='text-[#E94724]'>trust us</span>
         </div>
+
+        {/* show data */}
         <div className='w-full flex justify-around flex-wrap overflow-hidden'>
             {
                 stats.map((stat,i) => (
@@ -58,11 +61,15 @@ function University() {
                 )
             }
         </div>
+
+        {/* show university image */}
         <div className='w-full hidden md:flex justify-around overflow-hidden'>
             {
                 colleges.map((college) => <img src={`./college/${college}`} alt="logo" className='mx-5' />)
             }
         </div>
+
+        {/* bottom red bar */}
         <div className='w-1/2 md:w-1/5 h-3 bg-[#E94724] absolute bottom-0 right-[0]'></div>
     </div>
   )

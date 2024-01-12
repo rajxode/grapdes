@@ -1,4 +1,6 @@
 
+// slider of cards
+
 import React from 'react';
 import SingleSlide from './SingleSlide';
 import Slider from "react-slick";
@@ -37,7 +39,7 @@ const data = [
     },
 ]
 
-
+// style the next button
 function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -51,6 +53,7 @@ function SampleNextArrow(props) {
 
 function SliderBar() {
 
+    // settings of slider
     const settings = {
         infinite: true,
         speed: 500,
@@ -72,10 +75,13 @@ function SliderBar() {
     return (
         <div className='w-full h-[70vh] py-[10vh] relative px-[7%]'>
             <div className='w-full h-full flex flex-col justify-between'>
+                
+                {/* heading of section */}
                 <div className='text-4xl font-bold'>
                     Learn more about <span className='text-[#EA4722]'>what we solve</span>
                 </div>
 
+                {/* show slider */}
                 <div className='w-full px-5'>
                     <Slider {...settings}>
                         {data.map((slide, index) => <SingleSlide key={index} index={index} slide={slide}/>)}
@@ -83,6 +89,8 @@ function SliderBar() {
                 </div>
 
             </div>
+
+            {/* semicircle image */}
             <div className='absolute bottom-[15] left-[0] z-10'>
                 <img src="./main/top.png" alt="image" />
             </div>

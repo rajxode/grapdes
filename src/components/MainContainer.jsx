@@ -1,3 +1,6 @@
+
+// main container containing all the required section
+
 import React from 'react';
 import HomeBanner from './HomeBanner';
 import SliderBar from './SliderBar';

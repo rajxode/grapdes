@@ -1,5 +1,8 @@
 
+// top banner image carousel 
+
 import React from 'react';
+
 
 const data = [
   {
@@ -33,18 +36,22 @@ function Carousel({currentIndex}) {
   return (
     <div className='w-full h-[90%] flex justify-between items-center'>
       <div className="w-full md:w-1/2 lg:w-[45%] h-3/4 flex flex-col justify-around">
+        {/* heading */}
         <div className='text-[2.5rem] font-extrabold leading-tight'>
           {data[currentIndex].heading}
         </div>
+        {/* content */}
         <div className='font-semibold'>
           {data[currentIndex].content}
         </div>
+        {/* button */}
         <div>
           <button className='px-4 btn bg-[#30A981] py-2 rounded-full text-white hover:text-[#30A981] hover:bg-white'>
             {data[currentIndex].buttonTitle}
           </button>
         </div>
       </div>
+      {/* banner image */}
       <div className="hidden md:block w-[45%] h-3/4">
         <img src={`/banner/${data[currentIndex].image}.png`} alt="logo" className='w-auto h-full' />
       </div>

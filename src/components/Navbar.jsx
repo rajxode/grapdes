@@ -1,26 +1,33 @@
+
+// navbar
+
 import React, { useState } from 'react';
 
 function Navbar() {
 
+    // to show menu icon on small screen
     const [ showMenu , setShowMenu] = useState(false);
 
     return (
         <>
         <div className='w-full h-[80px] flex justify-between items-center px-[7%]'>
+            {/* brand logo */}
             <div className='w-1/2 md:w-1/5'>
                 <img src="./main/logo.png" alt="brandLogo" className='h-auto w-auto' />
             </div>
+
+            {/* dummy link icons */}
             <div className='w-1/2 hidden md:flex justify-between px-2 items-center font-semibold'>
-                <div>
+                <div  className='cursor-pointer'>
                     Solutions <span><i class="fa-solid fa-angle-down"></i></span>
                 </div>
-                <div>
+                <div  className='cursor-pointer'>
                     Resource <span><i class="fa-solid fa-angle-down"></i></span>
                 </div>
-                <div>
+                <div  className='cursor-pointer'>
                     About Us
                 </div>
-                <div>
+                <div  className='cursor-pointer'>
                     Contact Us
                 </div>
                 <div className='flex items-center justify-center h-full'>
@@ -29,6 +36,8 @@ function Navbar() {
                     </button>
                 </div>
             </div>
+
+            {/* menu icon for small screen */}
             <div className='block md:hidden'>
                 <span className='hover:bg-slate-200 px-2 py-1 text-xl rounded cursor-pointer'
                     onClick={() => setShowMenu(!showMenu)}>
@@ -36,8 +45,12 @@ function Navbar() {
                 </span>
             </div>
         </div>
+
+        {/* small screen menu hidden on screen above medium size */}
         <div className={`fixed top-0 right-0 bg-white opacity-95 h-full flex flex-col justify-start
             transition-all duration-700 translate-x-0 z-20 ${showMenu ? 'w-2/3 p-[5%]' : 'w-0'}`}>
+            
+            {/* close icon */}
             <div className='w-full h-[50px] bg-slate-200 flex items-center justify-end px-[5%]
                 font-semibold text-xl rounded'>
                     <span className='px-2 py-[2px] hover:bg-slate-50 rounded-full cursor-pointer'
@@ -47,6 +60,8 @@ function Navbar() {
                             }
                     </span>
             </div>
+
+                {/* dummay menu links */}
                 {   
                     showMenu
                     &&
